@@ -1,0 +1,17 @@
+[package]
+name = "lpc-iap"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7.0"
+defmt = {version = "0.3", optional = true }
+
+[dependencies.num-traits]
+version = "0.2"
+default-features = false
+
+[dependencies.num-derive]
+version = "0.4.2"
+default-features = false
+
