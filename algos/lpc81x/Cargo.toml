@@ -1,0 +1,55 @@
+[package]
+authors = ["9names"]
+edition = "2021"
+readme = "README.md"
+name = "lpc810"
+version = "0.1.0"
+
+[dependencies]
+
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+flash-algorithm = { version = "0.5.0", git = "https://github.com/9names/flash-algorithm", branch = "mutable_buffer", default-features = false, features = ["panic-handler"]}
+lpc-iap = {path = "../../lpc-iap"}
+
+# this lets you use `cargo fix`!
+[[bin]]
+name = "lpc810"
+test = false
+bench = false
+
+[profile.dev]
+codegen-units = 1
+debug = 2
+debug-assertions = true
+incremental = false
+opt-level = 3
+overflow-checks = true
+
+[profile.release]
+codegen-units = 1
+debug = 2
+debug-assertions = false
+incremental = false
+lto = "fat"
+opt-level = 'z'
+overflow-checks = false
+
+# do not optimize proc-macro crates = faster builds from scratch
+[profile.dev.build-override]
+codegen-units = 8
+debug = false
+debug-assertions = false
+opt-level = 0
+overflow-checks = false
+
+[profile.release.build-override]
+codegen-units = 8
+debug = false
+debug-assertions = false
+opt-level = 0
+overflow-checks = false
+
+[features]
+default = []
+# generate an LPC compatible boot signature
+lpc-boot-sig = []
