@@ -32,7 +32,7 @@ impl crate::iap::Iap for Lpc1788 {
     fn chip_init(&self) {
         unsafe {
             // Map flash to address 0
-            MEMMAP.write_volatile(0x02);
+            MEMMAP.write_volatile(0x01);
         }
     }
 
