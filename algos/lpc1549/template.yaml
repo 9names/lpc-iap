@@ -1,4 +1,4 @@
-name: lpc1549
+name: lpc15xx
 variants:
   - name: lpc1549
     cores:
@@ -25,9 +25,9 @@ variants:
           access:
             boot: true
     flash_algorithms:
-      - lpc1549
+      - lpc15xx
 flash_algorithms:
-  - name: lpc1549
+  - name: lpc15xx
     description: A flash algorithm under test
     cores:
       - main

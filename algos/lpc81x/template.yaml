@@ -1,4 +1,4 @@
-name: lpc810
+name: lpc81x
 variants:
   - name: lpc810
     cores:
@@ -25,9 +25,9 @@ variants:
           access:
             boot: true
     flash_algorithms:
-      - lpc810
+      - lpc81x
 flash_algorithms:
-  - name: lpc810
+  - name: lpc81x
     description: A flash algorithm under test
     cores:
       - main

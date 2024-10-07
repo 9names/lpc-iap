@@ -2,7 +2,7 @@
 authors = ["9names"]
 edition = "2021"
 readme = "README.md"
-name = "lpc1549"
+name = "lpc15xx"
 version = "0.1.0"
 
 [dependencies]
@@ -13,7 +13,7 @@ lpc-iap = { path = "../../lpc-iap", default-features = false }
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "lpc1549"
+name = "lpc15xx"
 test = false
 bench = false
 

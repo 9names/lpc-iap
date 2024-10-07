@@ -2,7 +2,7 @@
 authors = ["9names"]
 edition = "2021"
 readme = "README.md"
-name = "lpc1347"
+name = "lpc13xx"
 version = "0.1.0"
 
 [dependencies]
@@ -12,7 +12,7 @@ flash-algorithm = "0.4.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "lpc1347"
+name = "lpc13xx"
 test = false
 bench = false
 

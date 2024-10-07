@@ -1,4 +1,4 @@
-name: lpc1347
+name: lpc13xx
 variants:
   - name: lpc1347
     cores:
@@ -25,9 +25,9 @@ variants:
           access:
             boot: true
     flash_algorithms:
-      - lpc1347
+      - lpc13xx
 flash_algorithms:
-  - name: lpc1347
+  - name: lpc13xx
     description: A flash algorithm under test
     cores:
       - main
