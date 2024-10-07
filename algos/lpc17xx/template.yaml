@@ -25,9 +25,9 @@ variants:
           access:
             boot: true
     flash_algorithms:
-      - lpc1788
+      - lpc17xx
 flash_algorithms:
-  - name: lpc1788
+  - name: lpc17xx
     description: A flash algorithm under test
     cores:
       - main
