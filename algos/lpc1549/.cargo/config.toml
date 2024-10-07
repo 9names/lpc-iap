@@ -18,4 +18,4 @@ rustflags = [
 runner = "target-gen test template.yaml target/definition.yaml --chip lpc1549 -n lpc1549"
 
 [build]
-target = "thumbv6m-none-eabi"
+target = "thumbv7m-none-eabi"

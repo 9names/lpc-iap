@@ -3,7 +3,7 @@ variants:
   - name: lpc1549
     cores:
       - name: main
-        type: armv6m
+        type: armv7m
         core_access_options: !Arm
           ap: 0x0
           psel: 0x0
