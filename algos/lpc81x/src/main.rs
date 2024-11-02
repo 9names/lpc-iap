@@ -35,8 +35,6 @@ impl FlashAlgorithm for Algorithm {
     }
 
     fn erase_sector(&mut self, addr: u32) -> Result<(), ErrorCode> {
-        // first 16 sectors are 4KB
-        // to make flashing easier, pretend that all sectors are 32KB
         let chip = Lpc81x::new();
         let sector = chip.addr_to_sector(addr);
         let _ = chip.prepare_sector_for_write(sector, sector);
