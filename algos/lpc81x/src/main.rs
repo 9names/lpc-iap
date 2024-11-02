@@ -1,13 +1,12 @@
 #![no_std]
 #![no_main]
 
-
 use flash_algorithm::*;
 
-use lpc_iap::lpc81x::{PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
-use lpc_iap::lpc81x::Chip;
 use lpc_iap::iap::err_decode;
 use lpc_iap::iap::Iap;
+use lpc_iap::lpc81x::Chip;
+use lpc_iap::lpc81x::{PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
 struct Algorithm;
 
 algorithm!(Algorithm, {
@@ -46,7 +45,7 @@ impl FlashAlgorithm for Algorithm {
         let datalen = data.len() as u32;
         let chip = Chip::new();
         let sector_start = chip.addr_to_sector(addr);
-        
+
         // unlock sectors first
         let _ = chip.prepare_sector_for_write(sector_start, sector_start);
         // write to flash
