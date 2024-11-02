@@ -5,17 +5,18 @@ use flash_algorithm::*;
 
 use lpc_iap::iap::err_decode;
 use lpc_iap::iap::Iap;
-use lpc_iap::lpc81x::Chip;
-use lpc_iap::lpc81x::{PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
+use lpc_iap::lpc81x::{
+    Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
+};
 struct Algorithm;
 
 algorithm!(Algorithm, {
     device_name: "lpc810",
     device_type: DeviceType::Onchip,
     flash_address: 0x0,
-    flash_size: 0x1000,
+    flash_size: FLASH_SIZE,
     page_size: PAGE_SIZE,
-    empty_value: 0xff,
+    empty_value: EMPTY_VAL,
     program_time_out: 1500,
     erase_time_out: 1500,
     sectors: [{

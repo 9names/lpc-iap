@@ -5,8 +5,9 @@ use flash_algorithm::*;
 use rtt_target::{rprint, rprintln, rtt_init_print};
 
 use lpc_iap::lpc1788::{
-    Chip, PAGE_SIZE, SECTOR_SIZE_LARGE, SECTOR_SIZE_SMALL, STARTUP_CORE_CLOCK_FREQ_KHZ,
+    Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
 };
+use lpc_iap::lpc1788::{SECTOR_ADDR_2, SECTOR_SIZE_2};
 struct Algorithm;
 
 use lpc_iap::iap::{err_decode, Iap};
@@ -25,6 +26,23 @@ use lpc_iap::iap::{err_decode, Iap};
 // });
 
 // 0.5 algo macro
+algorithm!(Algorithm, {
+    device_name: "lpc1788",
+    device_type: DeviceType::Onchip,
+    flash_address: 0x0,
+    flash_size: FLASH_SIZE,
+    page_size: PAGE_SIZE,
+    empty_value: EMPTY_VAL,
+    program_time_out: 1500,
+    erase_time_out: 1500,
+    sectors: [{
+        size: SECTOR_SIZE,
+        address: 0x0,
+    },{
+        size: SECTOR_SIZE_2,
+        address: SECTOR_ADDR_2,
+    }]
+});
 
 fn print_nibble(val: u8) {
     let a = val & 0x0f;
@@ -58,24 +76,6 @@ fn println_u32(val: u32) {
     print_u32(val);
     rprint!("\n");
 }
-
-algorithm!(Algorithm, {
-    device_name: "lpc1788",
-    device_type: DeviceType::Onchip,
-    flash_address: 0x0,
-    flash_size: 0x80000,
-    page_size: PAGE_SIZE,
-    empty_value: 0xff,
-    program_time_out: 1500,
-    erase_time_out: 1500,
-    sectors: [{
-        size: SECTOR_SIZE_SMALL,
-        address: 0x0,
-    },{
-        size: SECTOR_SIZE_LARGE,
-        address: 0x10000,
-    }]
-});
 
 fn erase_sectors(sector_start: u32, sector_end: u32) -> Result<(), ()> {
     let chip = Chip::new();

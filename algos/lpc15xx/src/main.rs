@@ -2,23 +2,21 @@
 #![no_main]
 
 use flash_algorithm::*;
-use lpc1549::Chip;
+use lpc1549::{Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
 use rtt_target::{rprintln, rtt_init_print};
 
 use lpc_iap::iap::err_decode;
 use lpc_iap::iap::Iap;
 use lpc_iap::*;
 
-use lpc_iap::lpc1549::PAGE_SIZE;
-use lpc_iap::lpc1549::SECTOR_SIZE;
 use lpc_iap::lpc1549::SYSMEMREMAP;
 struct Algorithm;
 
 algorithm!(Algorithm, {
     flash_address: 0x0,
-    flash_size: 0x00040000,
+    flash_size: FLASH_SIZE,
     page_size: PAGE_SIZE,
-    empty_value: 0xFF,
+    empty_value: EMPTY_VAL,
     sectors: [{
         size: SECTOR_SIZE as u32,
         address: 0x0,
@@ -64,6 +62,7 @@ fn erase_sectors(sector_start: u32, sector_end: u32) -> Result<(), ()> {
 
 impl FlashAlgorithm for Algorithm {
     fn new(_address: u32, _clock: u32, _function: Function) -> Result<Self, ErrorCode> {
+        let _ = STARTUP_CORE_CLOCK_FREQ_KHZ;
         rtt_init_print!();
         rprintln!("Init");
         unsafe {

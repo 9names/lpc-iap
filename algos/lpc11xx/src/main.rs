@@ -3,7 +3,9 @@
 
 use flash_algorithm::*;
 
-use lpc_iap::lpc1114::{Chip, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
+use lpc_iap::lpc1114::{
+    Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
+};
 
 use lpc_iap::iap::{err_decode, Iap};
 
@@ -11,9 +13,9 @@ struct Algorithm;
 
 algorithm!(Algorithm, {
     flash_address: 0x0,
-    flash_size: 0x8000,
+    flash_size: FLASH_SIZE,
     page_size: PAGE_SIZE,
-    empty_value: 0xff,
+    empty_value: EMPTY_VAL,
     sectors: [{
         size: SECTOR_SIZE,
         address: 0x0,

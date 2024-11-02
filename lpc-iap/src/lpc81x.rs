@@ -1,6 +1,7 @@
 pub const PAGE_SIZE: u32 = 64;
 pub const SECTOR_SIZE: u32 = 1024;
 pub const EMPTY_VAL: u8 = 0xFF;
+pub const FLASH_SIZE: u32 = 0x8000;
 
 pub const IAP_ENTRY_ADDRESS: usize = 0x1FFF_1FF1;
 

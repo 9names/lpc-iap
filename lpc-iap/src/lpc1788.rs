@@ -1,9 +1,9 @@
 pub const PAGE_SIZE: u32 = 1024;
-
-pub const SECTOR_SIZE: u32 = 32768;
-
-pub const SECTOR_SIZE_SMALL: u32 = 4096;
-pub const SECTOR_SIZE_LARGE: u32 = 32768;
+pub const SECTOR_SIZE: u32 = 4096;
+pub const EMPTY_VAL: u8 = 0xFF;
+pub const FLASH_SIZE: u32 = 0x80000;
+pub const SECTOR_SIZE_2: u32 = 32768;
+pub const SECTOR_ADDR_2: u32 = 0x10000;
 
 pub const IAP_ENTRY_ADDRESS: usize = 0x1fff1ff1;
 
@@ -38,12 +38,12 @@ impl crate::iap::Iap for Chip {
 
     fn addr_to_sector(&self, addr: u32) -> u32 {
         // let's assume that probe-rs will never ask for an invalid address
-        if addr < 0x10000 {
+        if addr < SECTOR_ADDR_2 {
             // first 16 sectors are 4KB
-            addr / SECTOR_SIZE_SMALL as u32
+            addr / SECTOR_SIZE as u32
         } else {
             // remaining sectors are 32KB
-            16 + ((addr - 0x10000) / (SECTOR_SIZE_LARGE as u32))
+            16 + ((addr - SECTOR_ADDR_2) / (SECTOR_SIZE_2 as u32))
         }
     }
 }
