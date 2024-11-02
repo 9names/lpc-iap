@@ -11,8 +11,6 @@ pub const MAINCLKSELB: *mut u32 = 0x40074084 as *mut u32;
 pub const SYSAHBCLKDIV: *mut u32 = 0x400740C0 as *mut u32;
 pub const SYSAHBCLKCTRL0: *mut u32 = 0x400740C4 as *mut u32;
 
-pub const MEMMAP: *mut u32 = 0x400FC040 as *mut u32;
-
 pub const STARTUP_CORE_CLOCK_FREQ_KHZ: u32 = 12_000;
 
 pub struct Chip;
@@ -28,8 +26,7 @@ impl crate::iap::Iap for Chip {
 
     fn chip_init(&self) {
         unsafe {
-            // Map flash to address 0
-            MEMMAP.write_volatile(0x02);
+            SYSMEMREMAP.write_volatile(0x02);
         }
     }
 
