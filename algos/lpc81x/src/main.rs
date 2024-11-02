@@ -5,7 +5,7 @@
 use flash_algorithm::*;
 
 use lpc_iap::lpc81x::{PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
-use lpc_iap::lpc81x::Lpc81x;
+use lpc_iap::lpc81x::Chip;
 use lpc_iap::iap::err_decode;
 use lpc_iap::iap::Iap;
 struct Algorithm;
@@ -29,13 +29,13 @@ algorithm!(Algorithm, {
 
 impl FlashAlgorithm for Algorithm {
     fn new(_address: u32, _clock: u32, _function: Function) -> Result<Self, ErrorCode> {
-        let chip = Lpc81x::new();
+        let chip = Chip::new();
         chip.chip_init();
         Ok(Self)
     }
 
     fn erase_sector(&mut self, addr: u32) -> Result<(), ErrorCode> {
-        let chip = Lpc81x::new();
+        let chip = Chip::new();
         let sector = chip.addr_to_sector(addr);
         let _ = chip.prepare_sector_for_write(sector, sector);
         let _ = chip.erase_sector(sector, sector, STARTUP_CORE_CLOCK_FREQ_KHZ);
@@ -44,7 +44,7 @@ impl FlashAlgorithm for Algorithm {
 
     fn program_page(&mut self, addr: u32, data: &mut [u8]) -> Result<(), ErrorCode> {
         let datalen = data.len() as u32;
-        let chip = Lpc81x::new();
+        let chip = Chip::new();
         let sector_start = chip.addr_to_sector(addr);
         
         // unlock sectors first

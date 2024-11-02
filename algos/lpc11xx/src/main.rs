@@ -3,7 +3,7 @@
 
 use flash_algorithm::*;
 
-use lpc_iap::lpc1114::{Lpc1114, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
+use lpc_iap::lpc1114::{Chip, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ};
 
 use lpc_iap::iap::{err_decode, Iap};
 
@@ -21,7 +21,7 @@ algorithm!(Algorithm, {
 });
 
 fn erase_sectors(sector_start: u32, sector_end: u32) -> Result<(), ()> {
-    let chip = Lpc1114::new();
+    let chip = Chip::new();
     // Check if the sectors need erasing first
     if let Err(e) = chip.blank_check_sector(sector_start, sector_end) {
         let e = err_decode(e);
@@ -48,7 +48,7 @@ fn erase_sectors(sector_start: u32, sector_end: u32) -> Result<(), ()> {
 
 impl FlashAlgorithm for Algorithm {
     fn new(_address: u32, _clock: u32, _function: Function) -> Result<Self, ErrorCode> {
-        let chip = Lpc1114::new();
+        let chip = Chip::new();
         chip.chip_init();
         Ok(Self)
     }
@@ -63,7 +63,7 @@ impl FlashAlgorithm for Algorithm {
     }
 
     fn erase_sector(&mut self, addr: u32) -> Result<(), ErrorCode> {
-        let chip = Lpc1114::new();
+        let chip = Chip::new();
         let sector = chip.addr_to_sector(addr);
         if let Ok(()) = erase_sectors(sector, sector) {
             Ok(())
@@ -73,7 +73,7 @@ impl FlashAlgorithm for Algorithm {
     }
 
     fn program_page(&mut self, addr: u32, data: &[u8]) -> Result<(), ErrorCode> {
-        let chip = Lpc1114::new();
+        let chip = Chip::new();
         let datalen = data.len() as u32;
         let sector_start = chip.addr_to_sector(addr);
         let sector_end = chip.addr_to_sector(addr + datalen);

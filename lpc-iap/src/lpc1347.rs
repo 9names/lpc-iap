@@ -15,9 +15,9 @@ pub const STARTUP_CORE_CLOCK_FREQ_KHZ: u32 = 12_000;
 
 #[cfg(feature = "defmt")]
 use defmt::Format;
-pub struct Lpc1347;
+pub struct Chip;
 
-impl crate::iap::Iap for Lpc1347 {
+impl crate::iap::Iap for Chip {
     fn new() -> Self {
         Self
     }

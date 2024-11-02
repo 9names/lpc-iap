@@ -22,9 +22,9 @@ pub const CRP: *mut u32 = 0x0000_02fc as *mut u32;
 
 #[cfg(feature = "defmt")]
 use defmt::Format;
-pub struct Lpc1114;
+pub struct Chip;
 
-impl crate::iap::Iap for Lpc1114 {
+impl crate::iap::Iap for Chip {
     fn new() -> Self {
         Self
     }

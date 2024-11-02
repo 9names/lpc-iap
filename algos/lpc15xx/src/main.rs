@@ -2,7 +2,7 @@
 #![no_main]
 
 use flash_algorithm::*;
-use lpc1549::Lpc1549;
+use lpc1549::Chip;
 use rtt_target::{rprintln, rtt_init_print};
 
 use lpc_iap::iap::err_decode;
@@ -34,7 +34,7 @@ fn addr_to_sector(addr: u32) -> u32 {
 }
 
 fn erase_sectors(sector_start: u32, sector_end: u32) -> Result<(), ()> {
-    let chip = Lpc1549::new();
+    let chip = Chip::new();
     // Check if the sectors need erasing first
     if let Err(e) = chip.blank_check_sector(sector_start, sector_end) {
         let e = err_decode(e);
@@ -96,7 +96,7 @@ impl FlashAlgorithm for Algorithm {
     }
 
     fn program_page(&mut self, addr: u32, data: &[u8]) -> Result<(), ErrorCode> {
-        let chip = Lpc1549::new();
+        let chip = Chip::new();
         rprintln!("Program Page addr:{} size:{}", addr, data.len());
         let datalen = data.len() as u32;
         let sector_start = addr_to_sector(addr);
