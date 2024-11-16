@@ -28,13 +28,13 @@ pub const CHIP_NAME: &str = "lpc43xx";
 #[cfg(feature = "defmt")]
 use defmt::Format;
 
-pub struct Lpc4337 {
+pub struct Chip {
     iap_address: usize,
 }
 
-impl crate::iap::Iap for Lpc4337 {
+impl crate::iap::Iap for Chip {
     fn new() -> Self {
-        Lpc4337 {
+        Chip {
             iap_address: unsafe { IAP_ENTRY_ADDRESS.read_volatile() as usize },
         }
     }
