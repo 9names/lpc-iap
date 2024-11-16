@@ -4,7 +4,7 @@
 use flash_algorithm::*;
 
 use lpc_iap::iap::{err_decode, Iap};
-use lpc_iap::lpc1347::{
+use lpc_iap::lpc13xx::{
     Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
 };
 struct Algorithm;

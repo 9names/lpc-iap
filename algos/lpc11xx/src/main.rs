@@ -3,7 +3,7 @@
 
 use flash_algorithm::*;
 
-use lpc_iap::lpc1114::{
+use lpc_iap::lpc11xx::{
     Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
 };
 

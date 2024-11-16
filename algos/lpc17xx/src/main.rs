@@ -5,10 +5,10 @@ use flash_algorithm::*;
 use rtt_target::{rprint, rprintln, rtt_init_print};
 
 use lpc_iap::iap::{err_decode, Iap};
-use lpc_iap::lpc1788::{
+use lpc_iap::lpc178x::{
     Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
 };
-use lpc_iap::lpc1788::{SECTOR_ADDR_2, SECTOR_SIZE_2};
+use lpc_iap::lpc178x::{SECTOR_ADDR_2, SECTOR_SIZE_2};
 struct Algorithm;
 
 // 0.4 algo macro
@@ -161,7 +161,7 @@ impl FlashAlgorithm for Algorithm {
         generate_boot_sig(data, addr);
 
         // unlock sectors first
-        if let Ok(()) = chip.prepare_sector_for_write(0, 31) {
+        if let Ok(()) = chip.prepare_sector_for_write(sector_start, sector_end) {
         } else {
             return Err(ErrorCode::new(3).unwrap());
         }

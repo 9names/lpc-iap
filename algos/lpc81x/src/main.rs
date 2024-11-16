@@ -3,7 +3,6 @@
 
 use flash_algorithm::*;
 
-use lpc_iap::iap::err_decode;
 use lpc_iap::iap::Iap;
 use lpc_iap::lpc81x::{
     Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
@@ -43,7 +42,6 @@ impl FlashAlgorithm for Algorithm {
     }
 
     fn program_page(&mut self, addr: u32, data: &mut [u8]) -> Result<(), ErrorCode> {
-        let datalen = data.len() as u32;
         let chip = Chip::new();
         let sector_start = chip.addr_to_sector(addr);
 
