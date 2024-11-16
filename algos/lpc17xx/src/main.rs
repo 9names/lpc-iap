@@ -4,13 +4,12 @@
 use flash_algorithm::*;
 use rtt_target::{rprint, rprintln, rtt_init_print};
 
+use lpc_iap::iap::{err_decode, Iap};
 use lpc_iap::lpc1788::{
     Chip, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
 };
 use lpc_iap::lpc1788::{SECTOR_ADDR_2, SECTOR_SIZE_2};
 struct Algorithm;
-
-use lpc_iap::iap::{err_decode, Iap};
 
 // 0.4 algo macro
 
@@ -162,7 +161,7 @@ impl FlashAlgorithm for Algorithm {
         generate_boot_sig(data, addr);
 
         // unlock sectors first
-        if let Ok(()) = chip.prepare_sector_for_write(sector_start, sector_end) {
+        if let Ok(()) = chip.prepare_sector_for_write(0, 31) {
         } else {
             return Err(ErrorCode::new(3).unwrap());
         }
@@ -178,9 +177,9 @@ impl FlashAlgorithm for Algorithm {
             Ok(_) => {}
             Err(e) => {
                 if e == 10 {
-                    return Err(ErrorCode::new(4).unwrap());
-                } else {
                     return Err(ErrorCode::new(5).unwrap());
+                } else {
+                    return Err(ErrorCode::new(6).unwrap());
                 }
             }
         }
@@ -189,7 +188,5 @@ impl FlashAlgorithm for Algorithm {
 }
 
 impl Drop for Algorithm {
-    fn drop(&mut self) {
-        // TODO: Add code here to uninitialize the flash algorithm.
-    }
+    fn drop(&mut self) {}
 }

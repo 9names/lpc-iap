@@ -56,7 +56,5 @@ impl FlashAlgorithm for Algorithm {
 }
 
 impl Drop for Algorithm {
-    fn drop(&mut self) {
-        // TODO: Add code here to uninitialize the flash algorithm.
-    }
+    fn drop(&mut self) {}
 }

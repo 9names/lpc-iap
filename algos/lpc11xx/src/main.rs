@@ -94,9 +94,9 @@ impl FlashAlgorithm for Algorithm {
             Ok(_) => {}
             Err(e) => {
                 if e == 10 {
-                    return Err(ErrorCode::new(4).unwrap());
-                } else {
                     return Err(ErrorCode::new(5).unwrap());
+                } else {
+                    return Err(ErrorCode::new(6).unwrap());
                 }
             }
         }
@@ -105,7 +105,5 @@ impl FlashAlgorithm for Algorithm {
 }
 
 impl Drop for Algorithm {
-    fn drop(&mut self) {
-        // nothing to do here
-    }
+    fn drop(&mut self) {}
 }
