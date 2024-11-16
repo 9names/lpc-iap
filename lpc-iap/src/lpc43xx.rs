@@ -22,6 +22,9 @@ pub const STARTUP_CORE_CLOCK_FREQ_KHZ: u32 = 120_000;
 pub const CRP: *mut u32 = 0x0000_02fc as *mut u32;
 
 pub const BASE_MX_CLK: *mut u32 = 0x4005006C as *mut u32;
+
+pub const CHIP_NAME: &str = "lpc43xx";
+
 #[cfg(feature = "defmt")]
 use defmt::Format;
 

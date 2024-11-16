@@ -1,5 +1,5 @@
 pub const PAGE_SIZE: u32 = 1024;
-pub const SECTOR_SIZE: usize = 4096;
+pub const SECTOR_SIZE: u32 = 4096;
 pub const EMPTY_VAL: u8 = 0xFF;
 pub const FLASH_SIZE: u32 = 0x40000;
 
@@ -12,6 +12,8 @@ pub const SYSAHBCLKDIV: *mut u32 = 0x400740C0 as *mut u32;
 pub const SYSAHBCLKCTRL0: *mut u32 = 0x400740C4 as *mut u32;
 
 pub const STARTUP_CORE_CLOCK_FREQ_KHZ: u32 = 12_000;
+
+pub const CHIP_NAME: &str = "lpc154x";
 
 pub struct Chip;
 

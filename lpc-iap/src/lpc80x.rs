@@ -1,6 +1,6 @@
 pub const PAGE_SIZE: u32 = 64;
-pub const SECTOR_SIZE: usize = 1024;
-pub const FLASH_SIZE: usize = 0x8000;
+pub const SECTOR_SIZE: u32 = 1024;
+pub const FLASH_SIZE: u32 = 0x8000;
 pub const EMPTY_VAL: u8 = 0x00;
 
 pub const IAP_ENTRY_ADDRESS: usize = 0x0F00_1FF1;
@@ -14,6 +14,8 @@ pub const SYSAHBCLKDIV: *mut u32 = 0x40048058 as *mut u32;
 pub const STARTUP_CORE_CLOCK_FREQ_KHZ: u32 = 12_000;
 
 pub const CRP: *mut u32 = 0x0000_02fc as *mut u32;
+
+pub const CHIP_NAME: &str = "lpc80x";
 
 pub struct Chip;
 

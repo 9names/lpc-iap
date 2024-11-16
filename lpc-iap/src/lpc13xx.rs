@@ -13,6 +13,8 @@ pub const SYSAHBCLKDIV: *mut u32 = 0x40048078 as *mut u32;
 
 pub const STARTUP_CORE_CLOCK_FREQ_KHZ: u32 = 12_000;
 
+pub const CHIP_NAME: &str = "lpc134x";
+
 #[cfg(feature = "defmt")]
 use defmt::Format;
 pub struct Chip;

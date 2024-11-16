@@ -18,6 +18,8 @@ pub const MEMMAP: *mut u32 = 0x400FC040 as *mut u32;
 
 pub const STARTUP_CORE_CLOCK_FREQ_KHZ: u32 = 12_000;
 
+pub const CHIP_NAME: &str = "lpc178x";
+
 pub struct Chip;
 
 impl crate::iap::Iap for Chip {
