@@ -4,12 +4,12 @@
 pub mod iap;
 
 // chip specific defines and IAP impls
-pub mod lpc1114;
-pub mod lpc1347;
-pub mod lpc1549;
-pub mod lpc1788;
-pub mod lpc4337;
-pub mod lpc804;
+pub mod lpc11xx;
+pub mod lpc13xx;
+pub mod lpc15xx;
+pub mod lpc178x;
+pub mod lpc43xx;
+pub mod lpc80x;
 pub mod lpc81x;
 pub mod lpc82x;
 
