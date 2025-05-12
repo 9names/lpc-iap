@@ -1,0 +1,32 @@
+LPC1788 LPC177x_8x
+{'id': 'MFlash512', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x80000'}
+{'id': 'RamLoc64', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x10000'}
+{'id': 'RamPeriph32', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x8000'}
+LPC1787 LPC177x_8x
+{'id': 'MFlash512', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x80000'}
+{'id': 'RamLoc64', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x10000'}
+{'id': 'RamPeriph32', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x8000'}
+LPC1786 LPC177x_8x
+{'id': 'MFlash256', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x40000'}
+{'id': 'RamLoc64', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x10000'}
+{'id': 'RamPeriph16', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x4000'}
+LPC1785 LPC177x_8x
+{'id': 'MFlash256', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x40000'}
+{'id': 'RamLoc64', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x10000'}
+{'id': 'RamPeriph16', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x4000'}
+LPC1778 LPC177x_8x
+{'id': 'MFlash512', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x80000'}
+{'id': 'RamLoc64', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x10000'}
+{'id': 'RamPeriph32', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x8000'}
+LPC1777 LPC177x_8x
+{'id': 'MFlash512', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x80000'}
+{'id': 'RamLoc64', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x10000'}
+{'id': 'RamPeriph32', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x8000'}
+LPC1776 LPC177x_8x
+{'id': 'MFlash256', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x40000'}
+{'id': 'RamLoc64', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x10000'}
+{'id': 'RamPeriph16', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x4000'}
+LPC1774 LPC177x_8x
+{'id': 'MFlash128', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x20000'}
+{'id': 'RamLoc32', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x8000'}
+{'id': 'RamPeriph8', 'derived_from': 'RAM', 'location': '0x20000000', 'size': '0x2000'}

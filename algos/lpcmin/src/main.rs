@@ -32,7 +32,7 @@ use lpc_iap::lpc15xx::{
 
 #[cfg(feature = "lpc178x")]
 use lpc_iap::lpc178x::{
-    Chip, CHIP_NAME, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, STARTUP_CORE_CLOCK_FREQ_KHZ,
+    Chip, CHIP_NAME, EMPTY_VAL, FLASH_SIZE, PAGE_SIZE, SECTOR_SIZE, SECTOR_SIZE_2, SECTOR_ADDR_2, STARTUP_CORE_CLOCK_FREQ_KHZ,
 };
 
 #[cfg(feature = "lpc43xx")]

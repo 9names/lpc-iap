@@ -1,6 +1,7 @@
-pub const PAGE_SIZE: u32 = 64;
+pub const PAGE_SIZE: u32 = 1024;
 pub const SECTOR_SIZE: u32 = 1024;
-pub const FLASH_SIZE: u32 = 0x8000;
+// pub const FLASH_SIZE: u32 = 0x8000;
+pub const FLASH_SIZE: u32 = 0x7FC0; // last two pages are reserved
 pub const EMPTY_VAL: u8 = 0x00;
 
 pub const IAP_ENTRY_ADDRESS: usize = 0x0F00_1FF1;
