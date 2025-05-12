@@ -1,0 +1,120 @@
+LPC1111/101 LPC11xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1111/201 LPC11xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1112/101 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1112/201 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC11C12/301 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1113/201 LPC11xx
+{'id': 'MFlash24', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x6000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1113/301 LPC11xx
+{'id': 'MFlash24', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x6000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1114/201 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1114/301 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC11C14/301 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1111/102 LPC11xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1111/202 LPC11xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1112/102 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1112/202 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1113/202 LPC11xx
+{'id': 'MFlash24', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x6000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1113/302 LPC11xx
+{'id': 'MFlash24', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x6000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1114/202 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1114/302 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC11C22/301 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC11C24/301 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC11D14/301 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC11D14/302 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1110FD LPC11xx
+{'id': 'MFlash4', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x1000'}
+{'id': 'RamLoc1', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x400'}
+LPC1111FD/002 LPC11xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1112FD/102 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1114FD/102 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1114FN/102 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1111/103 LPC11xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1111/203 LPC11xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1112/103 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1112/203 LPC11xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1113/203 LPC11xx
+{'id': 'MFlash24', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x6000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1113/303 LPC11xx
+{'id': 'MFlash24', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x6000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1114/203 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1114/303 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1114/323 LPC11xx
+{'id': 'MFlash48', 'derived_from': 'Flash', 'location': '0x0', 'size': '0xc000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1114/333 LPC11xx
+{'id': 'MFlash56', 'derived_from': 'Flash', 'location': '0x0', 'size': '0xe000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1115/303 LPC11xx
+{'id': 'MFlash64', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x10000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+EM773/301 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+EM773/302 LPC11xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}

@@ -11,12 +11,6 @@ cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
 flash-algorithm = { version = "0.5.0", git = "https://github.com/9names/flash-algorithm", branch = "mutable_buffer", default-features = false, features = ["panic-handler"]}
 lpc-iap = {path = "../../lpc-iap"}
 
-# this lets you use `cargo fix`!
-# [[bin]]
-# name = "lpcmin"
-# test = false
-# bench = false
-
 [profile.dev]
 codegen-units = 1
 debug = 2
@@ -50,7 +44,7 @@ opt-level = 0
 overflow-checks = false
 
 [features]
-default = []
+default = ["lpc80x"]
 # generate an LPC compatible boot signature
 lpc-boot-sig = []
 
