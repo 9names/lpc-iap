@@ -1,4 +1,7 @@
-use std::{fs::File, io::BufReader};
+use std::{
+    fs::File,
+    io::{BufReader, Write},
+};
 
 use clap::Parser;
 
@@ -47,29 +50,43 @@ struct MemoryRange {
     memtype: MemoryType,
 }
 
+fn print_and_write(file: &mut File, text: &str) -> Result<(), Box<dyn std::error::Error>> {
+    println!("{text}");
+    file.write_all(text.as_bytes())?;
+    file.write_all("\n".as_bytes())?;
+    Ok(())
+}
+
 fn main() -> std::io::Result<()> {
+    process_file().unwrap();
+    Ok(())
+}
+
+fn process_file() -> Result<(), Box<dyn std::error::Error>> {
     let args = Args::parse();
     let file = File::open(&args.target_json_filename)?;
     let reader = BufReader::new(file);
-    let target: Chips = serde_json::from_reader(reader)?;
+    let mut target: Chips = serde_json::from_reader(reader)?;
     println!("File {}", &args.target_json_filename);
     // println!("Target: {target:?}");
     println!();
     let family = &target.chips.first().unwrap().family;
     let coretype = "armv6m";
+    let mut file = File::create(format!("./{family}_generated.yaml"))?;
+    print_and_write(&mut file, &format!("name: {}", family))?;
+    print_and_write(&mut file, "varients:")?;
 
-    println!("name: {}", family);
-    println!("varients:");
+    target.chips.sort_by(|a, b| a.id.cmp(&b.id));
     for chip in target.chips {
         // println!("{:?}", chip);
-        println!("- name: {}", chip.id);
-        println!("  cores:");
-        println!("  - name: main");
-        println!("    type: {}", coretype);
-        println!("    core_access_options: !Arm");
-        println!("      ap: 0");
-        println!("      psel: 0x0");
-        println!("  memory_map:");
+        print_and_write(&mut file, &format!("- name: {}", chip.id))?;
+        print_and_write(&mut file, "  cores:")?;
+        print_and_write(&mut file, "  - name: main")?;
+        print_and_write(&mut file, &format!("    type: {}", coretype))?;
+        print_and_write(&mut file, "    core_access_options: !Arm")?;
+        print_and_write(&mut file, "      ap: 0")?;
+        print_and_write(&mut file, "      psel: 0x0")?;
+        print_and_write(&mut file, "  memory_map:")?;
 
         let mut nvm: Vec<MemoryRange> = vec![];
         for memory_range in chip.memory {
@@ -110,14 +127,14 @@ fn main() -> std::io::Result<()> {
                 MemoryType::Nvm => "Nvm",
                 MemoryType::Ram => "Ram",
             };
-            println!("  - !{}", typestr);
-            println!("    name: {}", entry.name);
-            println!("    range:");
-            println!("      start: 0x{:X}", entry.start);
-            println!("      end: 0x{:X}", entry.end);
-            println!("    cores:");
+            print_and_write(&mut file, &format!("  - !{}", typestr))?;
+            print_and_write(&mut file, &format!("    name: {}", entry.name))?;
+            print_and_write(&mut file, "    range:")?;
+            print_and_write(&mut file, &format!("      start: 0x{:X}", entry.start))?;
+            print_and_write(&mut file, &format!("      end: 0x{:X}", entry.end))?;
+            print_and_write(&mut file, "    cores:")?;
             for core in entry.cores {
-                println!("      - {}", core);
+                print_and_write(&mut file, &format!("      - {}", core))?;
             }
             // println!("{:?}", entry);
         }
