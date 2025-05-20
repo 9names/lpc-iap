@@ -1,0 +1,58 @@
+{
+    "chips": [
+        {
+            "id": "LPC812",
+            "family": "LPC8xx",
+            "memory": [
+                {
+                    "id": "MFlash16",
+                    "derived_from": "Flash",
+                    "location": "0x0",
+                    "size": "0x4000"
+                },
+                {
+                    "id": "RamLoc4",
+                    "derived_from": "RAM",
+                    "location": "0x10000000",
+                    "size": "0x1000"
+                }
+            ]
+        },
+        {
+            "id": "LPC811",
+            "family": "LPC8xx",
+            "memory": [
+                {
+                    "id": "MFlash8",
+                    "derived_from": "Flash",
+                    "location": "0x0",
+                    "size": "0x2000"
+                },
+                {
+                    "id": "RamLoc2",
+                    "derived_from": "RAM",
+                    "location": "0x10000000",
+                    "size": "0x800"
+                }
+            ]
+        },
+        {
+            "id": "LPC810",
+            "family": "LPC8xx",
+            "memory": [
+                {
+                    "id": "MFlash4",
+                    "derived_from": "Flash",
+                    "location": "0x0",
+                    "size": "0x1000"
+                },
+                {
+                    "id": "RamLoc1",
+                    "derived_from": "RAM",
+                    "location": "0x10000000",
+                    "size": "0x400"
+                }
+            ]
+        }
+    ]
+}
