@@ -84,8 +84,7 @@ fn process_file() -> Result<(), Box<dyn std::error::Error>> {
         print_and_write(&mut file, "  - name: main")?;
         print_and_write(&mut file, &format!("    type: {}", coretype))?;
         print_and_write(&mut file, "    core_access_options: !Arm")?;
-        print_and_write(&mut file, "      ap: 0")?;
-        print_and_write(&mut file, "      psel: 0x0")?;
+        print_and_write(&mut file, "      ap: !v1 0")?;
         print_and_write(&mut file, "  memory_map:")?;
 
         let mut nvm: Vec<MemoryRange> = vec![];
