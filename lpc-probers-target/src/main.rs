@@ -74,7 +74,7 @@ fn process_file() -> Result<(), Box<dyn std::error::Error>> {
     let coretype = "armv6m";
     let mut file = File::create(format!("./{family}_generated.yaml"))?;
     print_and_write(&mut file, &format!("name: {}", family))?;
-    print_and_write(&mut file, "varients:")?;
+    print_and_write(&mut file, "variants:")?;
 
     target.chips.sort_by(|a, b| a.id.cmp(&b.id));
     for chip in target.chips {
