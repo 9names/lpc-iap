@@ -1,0 +1,18 @@
+LPC1311 LPC13xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc2', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x800'}
+LPC1313 LPC13xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1311/01 LPC13xx
+{'id': 'MFlash8', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x2000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1313/01 LPC13xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}
+LPC1342 LPC13xx
+{'id': 'MFlash16', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x4000'}
+{'id': 'RamLoc4', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x1000'}
+LPC1343 LPC13xx
+{'id': 'MFlash32', 'derived_from': 'Flash', 'location': '0x0', 'size': '0x8000'}
+{'id': 'RamLoc8', 'derived_from': 'RAM', 'location': '0x10000000', 'size': '0x2000'}

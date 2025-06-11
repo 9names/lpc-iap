@@ -1,0 +1,46 @@
+name: lpc81x
+variants:
+- name: lpc810
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: !v1 0
+  memory_map:
+  - !Nvm
+    range:
+      start: 0x0
+      end: 0x1000
+    cores:
+    - main
+  - !Ram
+    range:
+      start: 0x10000000
+      end: 0x100003e0
+    cores:
+    - main
+  flash_algorithms:
+  - lpc81x
+flash_algorithms:
+- name: lpc81x
+  description: A flash algorithm under test
+  default: true
+  instructions: 8LUDr4uwE0gBJgZwUB4DKB7SBqwUISBGAPC1+AAlBZUElQOVApUxIAGQAaghRgDwifgJSAVnRWdGZ0FvyQf80IZnBEkOcAIhAWAAIAuw8L0A8HX4QAIAEACABEAESQh4ASgC0QAgCHBwRwEgcEfARkACABCwtQKvirAPSQl4ASkW0YUKKEYpRgDwQvgFrBQhIEYA8Hj4CUgDkAKVAZU0IACQACUElWhGIUYA8Ev4AOABJShGCrCwvUACABDgLgAA8LUDr4uwBUYPSAB4ASgY0Q5GqAoBRgCSAPAa+AasFCEgRgDwUPgJSAWQBJYAmAOQApUzIAGQAaghRgDwI/gAIADgASALsPC9QAIAEOAuAADwtQOvi7ANRgZGBqwUISBGAPAx+AAgBZAEkAOVApYyIAGQAaghRgDwBfgLsPC9gLUArwDe+LUErwxGBUYA8Bj4BkYA8BH4B0ooRiFGkEckaPAHAdEA8Ar4YR4gRohBIUb4vcBG8R//H3K2cEditnBH7/MQgHBH8LUDrwQpEdMMH6IIUhwDJRVAEdAAJgJGQMIBLSNGDdBGYAItBdEIOQgwBeALRgJGD+CGYAw5DDACRgtGDCwI0wAgEGBQYJBg0GAQOxAyAyv22NAYgkIa0gMkHEBZHgAsC9AAIxNwASwD0VIcAykG0g3gU3ACLAvRkhwDKQfTACHRcJFwUXARcBIdgkL30fC9k3DSHAMp8tL55wDU1NQ=
+  pc_init: 0x1
+  pc_uninit: 0x5d
+  pc_program_page: 0xc1
+  pc_erase_sector: 0x75
+  data_section_offset: 0x10000244
+  flash_properties:
+    address_range:
+      start: 0x0
+      end: 0x1000
+    page_size: 0x40
+    erased_byte_value: 0xff
+    program_page_timeout: 1500
+    erase_sector_timeout: 1500
+    sectors:
+    - size: 0x400
+      address: 0x0
+  cores:
+  - main

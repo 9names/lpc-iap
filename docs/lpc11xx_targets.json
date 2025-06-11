@@ -1,0 +1,724 @@
+{
+  "chips": [
+    {
+      "id": "LPC1111/101",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash8",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x2000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x800"
+        }
+      ]
+    },
+    {
+      "id": "LPC1111/201",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash8",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x2000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1112/101",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x800"
+        }
+      ]
+    },
+    {
+      "id": "LPC1112/201",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC11C12/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1113/201",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash24",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x6000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1113/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash24",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x6000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/201",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC11C14/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1111/102",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash8",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x2000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x800"
+        }
+      ]
+    },
+    {
+      "id": "LPC1111/202",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash8",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x2000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1112/102",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x800"
+        }
+      ]
+    },
+    {
+      "id": "LPC1112/202",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1113/202",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash24",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x6000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1113/302",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash24",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x6000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/202",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/302",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC11C22/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC11C24/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC11D14/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC11D14/302",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1110FD",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash4",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x1000"
+        },
+        {
+          "id": "RamLoc1",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x400"
+        }
+      ]
+    },
+    {
+      "id": "LPC1111FD/002",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash8",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x2000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x800"
+        }
+      ]
+    },
+    {
+      "id": "LPC1112FD/102",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114FD/102",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114FN/102",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1111/103",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash8",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x2000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x800"
+        }
+      ]
+    },
+    {
+      "id": "LPC1111/203",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash8",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x2000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1112/103",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc2",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x800"
+        }
+      ]
+    },
+    {
+      "id": "LPC1112/203",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash16",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x4000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1113/203",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash24",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x6000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1113/303",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash24",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x6000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/203",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc4",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x1000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/303",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/323",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash48",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0xc000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1114/333",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash56",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0xe000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "LPC1115/303",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash64",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x10000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "EM773/301",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    },
+    {
+      "id": "EM773/302",
+      "family": "LPC11xx",
+      "memory": [
+        {
+          "id": "MFlash32",
+          "derived_from": "Flash",
+          "location": "0x0",
+          "size": "0x8000"
+        },
+        {
+          "id": "RamLoc8",
+          "derived_from": "RAM",
+          "location": "0x10000000",
+          "size": "0x2000"
+        }
+      ]
+    }
+  ]
+}
