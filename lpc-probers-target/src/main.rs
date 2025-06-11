@@ -67,8 +67,7 @@ fn main() -> std::io::Result<()> {
         println!("  - name: main");
         println!("    type: {}", coretype);
         println!("    core_access_options: !Arm");
-        println!("      ap: 0");
-        println!("      psel: 0x0");
+        println!("      ap: !v1 0");
         println!("  memory_map:");
 
         let mut nvm: Vec<MemoryRange> = vec![];
