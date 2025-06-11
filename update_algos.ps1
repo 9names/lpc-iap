@@ -1,4 +1,17 @@
-$lpcs = @('lpc81x', 'lpc11xx', 'lpc13xx', 'lpc15xx', 'lpc17xx')
+$lpcs = @('lpc81x', 'lpc11xx', 'lpc13xx', 'lpc15xx', 'lpc177x_8x')
+
+Push-Location "lpc-probers-target"
+foreach ($lpc in $lpcs) {
+    $jsonPath = "..\docs\$($lpc)_targets.json"
+    $generated = "$($lpc)_generated.yaml"
+    $template = "..\algos\$($lpc)\template.yaml"
+
+    # Write-Host "json: $jsonPath, generated: $generated, template: $template"
+
+    cargo run -- $jsonPath
+    Copy-Item "$generated" "$template"
+}
+Pop-Location
 
 foreach ($lpc in $lpcs) {
     Push-Location "algos\$lpc"
