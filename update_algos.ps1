@@ -1,4 +1,4 @@
-$lpcs = @('lpc81x', 'lpc11xx', 'lpc13xx', 'lpc15xx', 'lpc177x_8x')
+$lpcs = @('lpc8xx', 'lpc11xx', 'lpc13xx', 'lpc15xx', 'lpc177x_8x')
 
 Push-Location "lpc-probers-target"
 foreach ($lpc in $lpcs) {
